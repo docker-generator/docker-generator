@@ -1,0 +1,9 @@
+[submodule "service-templating-downloading"]
+        path = service-templating-downloading
+        url = git@github.com:docker-generator/service-templating-downloading.git
+[submodule "api"]
+	path = api
+	url = git@github.com:docker-generator/api.git
+[submodule "webapp"]
+	path = webapp
+	url = git@github.com:docker-generator/webapp.git
