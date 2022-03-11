@@ -1,0 +1,27 @@
+# dev
+version: '3.7'
+
+services:
+  webapp:
+    container_name: webapp
+    build:
+      context: ./webapp
+      dockerfile: DockerfileProduction
+    ports:
+      - "8181:80"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  servicenode:
+    container_name: servicenodeprod
+    build:
+      context: ./service-templating-downloading
+      dockerfile: DockerfileProduction
+    ports:
+      - "4001:4000"
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: DockerfileProduction
+    ports:
+      - "8081:8080"
